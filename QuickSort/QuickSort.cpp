@@ -6,3 +6,6 @@ int arr[20];
 int cmp_count = 0; // number of comprasion
 int mov_count = 0; // number of movement
 int n;
+void input() {
+	while (true)
+	{
