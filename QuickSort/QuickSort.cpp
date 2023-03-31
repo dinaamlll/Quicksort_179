@@ -37,7 +37,7 @@ void swip(int x, int y)
 	arr[x] = arr[y];
 	arr[y] = temp;
 }
-void q_short(int low, int high) 
+void q_short(int low, int high)
 {
 	int pivot, i, j;
 	if (low > high)	//Langkah 1
@@ -61,7 +61,30 @@ void q_short(int low, int high)
 		cmp_count++;
 		// Search for an element less thaner equal to pivot
 		while ((arr[j] > pivot) && (j >= low)) // Langkah 7
-		{j--; // Langkah 8
-		cmp_count++;
+		{
+			j--; // Langkah 8
+			cmp_count++;
 		}
+		cmp_count++;
+		if (i < j)// Langkah 9
+			//if greater element is on left of the element 
+		{
+			// swap the element at index i with the element at index j
+			swap(i, j);
+			mov_count++;
+		}
+	}
+	//j now contraint the index of the last element in the sort list
+	if (low < j)// Langkah 11
+		//move to the pivot to its correct position in the list 
+	{
+		swap(low, j);
+		mov_count++;
+	}
+	//sort the list on the left of pivot using quick sort
+	q_short(low, j - i);//Langkah 12
+	//sort the list on the right of pivot using quick sort 
+	q_short(j + 1, high);//Langkah 13
+}
+
 
