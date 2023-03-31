@@ -19,9 +19,9 @@ void input() {
 
 	}
 
-	cout << "\n========================" << endl;
-	cout << "\nEnter attau element" << endl;
-	cout << "\n========================" << endl;
+	cout << "\n------------------------" << endl;
+	cout << "\nEnter array element" << endl;
+	cout << "\n-------------------------" << endl;
 
 	for (int i = 0; i < n; i++)
 	{
@@ -30,7 +30,7 @@ void input() {
 	}
 }
 // swap the element at index x with the element at index y
-void swip(int x, int y)
+void swap(int x, int y)
 {
 	int temp;
 	temp = arr[x];
@@ -46,8 +46,8 @@ void q_short(int low, int high)
 	//Partition the list into two parts
 	//One containing elements less that or equal to pivot
 	//Outher containing elemnt greather than pivot
-	i = low + 1; // Langkah 2
-	high; // Langkah 4
+	i = low + 1; // Langkah 3
+	j = high; // Langkah 4
 	pivot = arr[low];	//Langkah 2
 
 	while (i <= j) // Langkah 10
@@ -64,16 +64,16 @@ void q_short(int low, int high)
 		{j--; // Langkah 8
 			cmp_count++;
 		}
-		cmp_count++;
-		if (i < j)// Langkah 9
-			//if greater element is on left of the element 
-		{
-			// swap the element at index i with the element at index j
-			swap(i, j);
-			mov_count++;
-		}
+	cmp_count++;
+	if (i < j)// Langkah 9
+		//if greater element is on left of the element 
+	{
+		// swap the element at index i with the element at index j
+		swap(i, j);
+		mov_count++;
 	}
-	//j now contraint the index of the last element in the sort list
+}
+//j now contraint the index of the last element in the sort list
 	if (low < j)// Langkah 11
 		//move to the pivot to its correct position in the list 
 	{
@@ -87,9 +87,9 @@ void q_short(int low, int high)
 }
 
 void display() {
-	cout << "\n======================" << endl;
+	cout << "\n----------------------" << endl;
 	cout << "\n-sorted array" << endl;
-	cout << "\n======================" << endl;
+	cout << "\n----------------------" << endl;
 
 	for (int i = 0; i < n; i++)
 	{
