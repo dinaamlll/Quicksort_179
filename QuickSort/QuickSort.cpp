@@ -18,3 +18,7 @@ void input() {
 			cout << "\nMaksimum panjang array adalah 20" << endl;
 
 	}
+
+	cout << "\n========================" << endl;
+	cout << "\nEnter attau element" << endl;
+	cout << "\n========================" << endl;
